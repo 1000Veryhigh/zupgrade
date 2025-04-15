@@ -14,6 +14,14 @@ function example31() {
     const token1 = JWT.sign(payload, 'secret', { some: 'params' })
 }
 
+function example31_again() {
+    // ruleid: jwt_exposed_credentials
+    const jose = require('jose')
+    const { JWK, JWT } = jose
+    const payload = { one: 1, two: 2, password: 123 }
+    const token1 = JWT.sign(payload, 'secret', { some: 'params' })
+}
+
 function example32() {
     // ruleid: jwt_exposed_credentials
     const jose = require('jose')
